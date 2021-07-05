@@ -1,0 +1,7 @@
+/* Localized versions of Info.plist keys */
+CFBundleDisplayName = Lantern;
+"SettingsNavBarTitle" = "Settings";
+"StrobeSlider" = "Strobe interval";
+"BrightnessSlider" = "Brightness";
+"SOSSlider" = "S.O.S interval";
+

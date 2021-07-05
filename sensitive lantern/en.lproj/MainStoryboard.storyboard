@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="h85-PC-TvX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="fundo-aco-botao-aco-DESLIGADO.png" id="O4o-Yy-4L5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" restorationIdentifier="powerButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nl8-0P-dCR" customClass="OBShapedButton">
+                                <rect key="frame" x="128" y="168" width="64" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="powerButton" image="botao-desligado.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="powerButtonPressed:" destination="2" eventType="touchDown" id="XyQ-vE-6Yp"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleAspectFill" image="slide-bar.png" id="biM-JO-xzo">
+                                <rect key="frame" x="-140" y="0.0" width="600" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5fq-eQ-7eW" appends="YES" id="8jj-y3-R9U"/>
+                                    <outletCollection property="gestureRecognizers" destination="FFN-lp-N9H" appends="YES" id="mOq-R2-gU4"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="SettingsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a9G-hf-WIB">
+                                <rect key="frame" x="142" y="338" width="36" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="settingButton" image="setting-button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="setting-button-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButtonTouchedUp:" destination="2" eventType="touchUpInside" id="Os3-FH-w9J"/>
+                                    <segue destination="qJR-vw-GzO" kind="push" id="Lm7-in-MCF"/>
+                                </connections>
+                            </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zGy-iT-1xZ">
+                                <rect key="frame" x="0.0" y="480" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </adBannerView>
+                            <view contentMode="scaleToFill" id="Fbj-d1-WQj" customClass="MyGADBannerView">
+                                <rect key="frame" x="0.0" y="480" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Dg-hb-2Oh"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="bannerView" destination="zGy-iT-1xZ" id="TSB-Ah-e7i"/>
+                        <outlet property="gadBannerView" destination="Fbj-d1-WQj" id="IGT-9e-xb1"/>
+                        <outlet property="powerButton" destination="nl8-0P-dCR" id="3nG-pN-4mR"/>
+                        <outlet property="slideBar" destination="biM-JO-xzo" id="I2T-e7-Wud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="5fq-eQ-7eW">
+                    <connections>
+                        <action selector="handleSwipeRight:" destination="2" id="ZJE-XX-TA8"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="FFN-lp-N9H">
+                    <connections>
+                        <action selector="handleSwipeLeft:" destination="2" id="24I-Ve-Wio"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-2848" y="-1144"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ptT-NP-U1D">
+            <objects>
+                <viewController id="qJR-vw-GzO" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bbU-nT-9Dm" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="settings-background.png" id="mol-Ia-Ik4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.29999999999999999" maxValue="2" continuous="NO" id="d1v-H6-gRH">
+                                <rect key="frame" x="18" y="39" width="284" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderStrobeIntervalValueChanged:" destination="qJR-vw-GzO" eventType="valueChanged" id="x4A-vA-pJD"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Strobe interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fFw-pq-p3K">
+                                <rect key="frame" x="20" y="10" width="284" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Brightness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G7Y-f7-dfj">
+                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="1" continuous="NO" id="wxJ-lk-ZN2">
+                                <rect key="frame" x="18" y="179" width="284" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderBrightnessValueChanged:" destination="qJR-vw-GzO" eventType="valueChanged" id="fGg-GS-BH1"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.29999999999999999" maxValue="1" continuous="NO" id="gvZ-R7-Ey1">
+                                <rect key="frame" x="18" y="109" width="284" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderSOSIntervalValueChanged:" destination="qJR-vw-GzO" eventType="valueChanged" id="zZk-29-85j"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SOS interval" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Th0-XV-Fym">
+                                <rect key="frame" x="20" y="80" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bYq-G7-FM3" propertyAccessControl="localizable"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="labelBrightness" destination="G7Y-f7-dfj" id="JNT-YD-cUo"/>
+                        <outlet property="labelSOS" destination="Th0-XV-Fym" id="71y-KL-ds3"/>
+                        <outlet property="labelStrobe" destination="fFw-pq-p3K" id="AOI-Wj-xQf"/>
+                        <outlet property="sliderBrightness" destination="wxJ-lk-ZN2" id="GnB-YT-siC"/>
+                        <outlet property="sliderSOS" destination="gvZ-R7-Ey1" id="qzg-fJ-gxF"/>
+                        <outlet property="sliderStrobe" destination="d1v-H6-gRH" id="7ql-WY-sb6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juG-Cw-iHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2326" y="-1157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dyI-jq-EQT">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="h85-PC-TvX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" barStyle="blackTranslucent" id="udS-5l-7Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Tnz-DD-JNd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSo-wt-qXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3345" y="-1144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao-desligado.png" width="127" height="175"/>
+        <image name="fundo-aco-botao-aco-DESLIGADO.png" width="640" height="1136"/>
+        <image name="setting-button-pressed.png" width="70" height="73"/>
+        <image name="setting-button.png" width="70" height="73"/>
+        <image name="settings-background.png" width="640" height="1136"/>
+        <image name="slide-bar.png" width="1200" height="211"/>
+    </resources>
+    <classes>
+        <class className="GADBannerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GADBannerView.h"/>
+        </class>
+        <class className="MyGADBannerView" superclassName="GADBannerView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyGADBannerView.h"/>
+        </class>
+        <class className="OBShapedButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OBShapedButton.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelBrightness" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelSOS" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelStrobe" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sliderBrightness" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderSOS" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderStrobe" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handleSwipeLeft:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="handleSwipeRight:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="powerButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="settingsButtonTouchedUp:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="gadBannerView" candidateClass="MyGADBannerView"/>
+                <relationship kind="outlet" name="powerButton" candidateClass="OBShapedButton"/>
+                <relationship kind="outlet" name="slideBar" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

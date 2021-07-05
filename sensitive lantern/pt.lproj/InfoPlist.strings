@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+CFBundleDisplayName = Lanterna;
+"SettingsNavBarTitle" = "Ajustes";
+"StrobeSlider" = "Velocidade da intermitência";
+"BrightnessSlider" = "Brilho";
+"SOSSlider" = "Velocidade do S.O.S";
